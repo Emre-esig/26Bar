@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafebar26 - Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">🍺 Cafebar26</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+    </ul>
+    <a href="https://www.instagram.com/cafebar.le26/" target="_blank" class="instagram-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+  </nav>
+</header>
+
+  <section class="menu">
+    <h2>Notre <span>Menu</span></h2>
+    <p>Découvrez notre sélection de cocktails craftés, plats savoureux et spécialités maison</p>
+
+    <h3>Coups de Cœur du <span>Chef</span></h3>
+    <div class="specials">
+      <div class="special-card">
+        <h4>⭐ Cocktail Signature 26</h4>
+        <p>Gin français, liqueur de violette, citron caviar, eau de rose</p>
+        <span>18€</span>
+      </div>
+      <div class="special-card">
+        <h4>⭐ Plat du Chef</h4>
+        <p>Magret de canard laqué au miel, légumes de saison, jus aux épices</p>
+        <span>24€</span>
+      </div>
+      <div class="special-card">
+        <h4>⭐ Dessert Surprise</h4>
+        <p>Création du jour par notre chef pâtissier</p>
+        <span>10€</span>
+      </div>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-col">
+        <h3>Nos <span>Boissons</span></h3>
+        <div class="menu-item">
+          <h4>Old Fashioned 26</h4><span>14€</span>
+          <p>Whisky bourbon, sirop d’érable, orange amère</p>
+        </div>
+        <div class="menu-item">
+          <h4>Negroni Parisien</h4><span>13€</span>
+          <p>Gin artisanal, Campari, vermouth rouge français</p>
+        </div>
+        <div class="menu-item">
+          <h4>Mojito Royal</h4><span>15€</span>
+          <p>Rhum blanc, menthe fraîche, champagne</p>
+        </div>
+      </div>
+      <div class="menu-col">
+        <h3>Nos <span>Plats</span></h3>
+        <div class="menu-item">
+          <h4>Planche de Charcuterie</h4><span>16€</span>
+          <p>Sélection de 3 charcuteries, cornichons</p>
+        </div>
+        <div class="menu-item">
+          <h4>Planche de Fromages</h4><span>18€</span>
+          <p>3 fromages français, confiture de figues</p>
+        </div>
+        <div class="menu-item">
+          <h4>Olives Marinées</h4><span>8€</span>
+          <p>Mélange d’olives, herbes de Provence</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>🍺 Barcafe26</h3>
+        <p>L’endroit parfait pour savourer d’excellents cocktails dans une ambiance conviviale et moderne.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </div>
+    <div class="footer-col">
+        <h4>Suivez-nous</h4>
+        <a href="https://www.instagram.com/cafebar.le26/" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p>Rue Baptiste-Savoye 62, 2610 Saint-Imier<br>
+        Tel: 032 285 14 14</p>
+    </div>
+
+    </div>
+    <div class="footer-bottom">
+      © 2024 Cafebar26 - Emre Gürsültür | Mentions légales - Politique de confidentialité
+    </div>
+  </footer>
+
+    <script>
+  // Récupère le chemin courant de façon robuste (gère Live Server, file://, / et /index.html)
+  const currentPath = (() => {
+    try {
+      const p = new URL(window.location.href).pathname;
+      const last = p.split('/').filter(Boolean).pop();
+      return last || 'index.html';
+    } catch {
+      return 'index.html';
+    }
+  })();
+
+  // Marque le lien correspondant comme actif
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    // Normalise la cible (ne garde que le dernier segment)
+    const hrefLast = a.getAttribute('href').split('/').filter(Boolean).pop();
+    if (hrefLast === currentPath) {
+      a.classList.add('active');
+    }
+  });
+</script>
+
+
+</body>
+</html>

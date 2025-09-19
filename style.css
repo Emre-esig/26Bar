@@ -1,0 +1,250 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: Arial, sans-serif;
+  background: #0d1423;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 50px;
+  background: #111b2e;
+}
+
+.logo {
+  color: #f1c40f;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+/* MENUS à droite */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin-left: auto; /* pousse le menu complètement à droite */
+  margin-right: 20px; /* espace avant l'icône insta */
+}
+
+.navbar .nav-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 9px;
+  transition: background .2s, color .2s;
+  font-size: 25px;
+}
+
+/* état actif qui DOIT rester */
+.navbar .nav-links a.active {
+  background: #f1c40f;
+  color: #111;
+}
+
+/* effet au survol uniquement */
+.navbar .nav-links a:hover {
+  background: #f1c40f;
+  color: #111;
+}
+
+
+/* INSTAGRAM ICON */
+.instagram-icon img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s ease;
+}
+
+.instagram-icon img:hover {
+  transform: scale(1.2);
+}
+
+
+
+/* HERO */
+.hero {
+  background: url('img/bar.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 { font-size: 48px; color: #fff; }
+.hero h1 span { color: #f1c40f; }
+.hero p { margin-top: 10px; font-size: 18px; }
+
+/* SECTIONS */
+section { padding: 60px 80px; text-align: center; }
+h2 { font-size: 36px; margin-bottom: 20px; color: #fff; }
+h2 span { color: #f1c40f; }
+
+/* ==== TEAM (1 carte en haut centrée + 2 cartes en dessous) ==== */
+.team-container{
+  /* règle la largeur d'une carte : ajuste si besoin */
+  --card-w: 420px;
+
+  display: grid;
+  grid-template-columns: repeat(2, var(--card-w)); /* 2 colonnes fixes */
+  gap: 20px;
+  justify-content: center;   /* centre l'ensemble dans la page */
+  align-items: start;
+  margin-top: 30px;
+}
+
+.team-card{
+  background:#182132;
+  border-radius:10px;
+  overflow:hidden;
+  color:#fff;
+  text-align:left;
+}
+
+.team-card img{ width:100%; height:auto; display:block; }
+.team-info{ padding:15px; }
+.team-info .role{ color:#f1c40f; }
+
+/* Carte du haut : même largeur qu'une small, mais centrée au-dessus des deux autres */
+.team-card.large{
+  grid-column: 1 / -1;     /* occupe la rangée entière */
+  width: var(--card-w);    /* même largeur qu'une colonne */
+  justify-self: center;    /* centrée entre les deux colonnes */
+}
+
+/* Les deux cartes du bas occupent chacune une colonne */
+.team-card.small{
+  width: var(--card-w);
+}
+
+
+/* GALLERY */
+.gallery-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.gallery-container img {
+  width: 22%;
+  border-radius: 10px;
+}
+
+/* MENU */
+.specials { display: flex; gap: 20px; justify-content: center; margin: 30px 0; }
+.special-card {
+  background: #182132;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+}
+.special-card span { color: #f1c40f; font-weight: bold; }
+.menu-grid { display: flex; gap: 40px; justify-content: center; margin-top: 30px; }
+.menu-col { flex: 1; }
+.menu-item {
+  background: #182132;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+.menu-item span { float: right; color: #f1c40f; }
+
+/* ABOUT */
+.about-card {
+  background: #182132;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+.about-card h3 { color: #f1c40f; margin-bottom: 10px; }
+
+/* INFOS */
+.infos-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+.infos-col { flex: 1; }
+.info-card {
+  background: #182132;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+.info-card h4 { color: #f1c40f; margin-bottom: 10px; }
+.map-placeholder {
+  background: #333
+}
+
+/* FOOTER */
+footer {
+  background: #0c1322;
+  color: #ccc;
+  padding: 40px 80px 20px;
+  margin-top: 50px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+.footer-col h3 {
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-col ul li {
+  margin: 5px 0;
+}
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #f1c40f;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+}
+.footer-bottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  color: #f1c40f;
+}
+
+.social-link {
+  font-size: 28px;   /* taille du logo */
+  color: #f1c40f;    /* couleur par défaut (jaune comme ton thème) */
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.social-link:hover {
+  color: #e1306c;    /* couleur officielle Instagram au hover */
+  transform: scale(1.2);
+}

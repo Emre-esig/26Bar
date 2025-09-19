@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafebar26 - À propos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">🍺 Cafebar26</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="apropos.html">À propos</a></li>
+    </ul>
+    <a href="https://www.instagram.com/cafebar.le26/" target="_blank" class="instagram-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+    </a>
+  </nav>
+</header>
+
+  <section class="about">
+    <h2>À Propos du <span>26Bar</span></h2>
+    <p>Découvrez notre histoire, notre passion et toutes les informations pour nous rendre visite</p>
+
+    <div class="about-card">
+      <h3>Notre Histoire</h3>
+      <p>Né de la passion de quatre amis pour l’art du cocktail et la convivialité, le 26Bar a ouvert ses portes en 2020 dans le vibrant quartier du Marais...</p>
+      <p>Nous avons créé un lieu unique où l’art de la mixologie rencontre l’ambiance chaleureuse d’un bar de quartier...</p>
+      <p>Notre équipe de bartenders expérimentés vous accueille dans un cadre moderne avec des touches industrielles...</p>
+      <p>Au-delà des cocktails, nous proposons une cuisine fusion moderne avec des tapas créatives et des plats signature...</p>
+    </div>
+  </section>
+
+  <section class="infos">
+    <div class="infos-container">
+      <div class="infos-col">
+        <h3>Informations <span>Pratiques</span></h3>
+        <div class="info-card">
+          <h4>Coordonnées</h4>
+          <p>Rue Baptiste-Savoye 62, 2610 Saint-Imier<br>
+          📞 032 285 14 14<br>
+          ✉️ contact@26bar.ch</p>
+        </div>
+        <div class="info-card">
+          <h4>Horaires d’Ouverture</h4>
+          <p>Lundi : Fermé<br>
+          Mardi : 17h00 - 02h00<br>
+          Mercredi : 17h00 - 02h00<br>
+          Jeudi : 17h00 - 02h00<br>
+          Vendredi : 17h00 - 03h00<br>
+          Samedi : 15h00 - 03h00<br>
+          Dimanche : 15h00 - 01h00</p>
+        </div>
+      </div>
+      <div class="infos-col">
+        <h3>Nous <span>Trouver</span></h3>
+        <div class="info-card">
+          <h4>Localisation</h4>
+          <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2713.320475810279!2d6.9952434!3d47.151577499999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e0722b9db7b5b%3A0x48d5006ff0205071!2sBar-Caf%C3%A9%20Le%2026!5e0!3m2!1sfr!2sch!4v1758288053078!5m2!1sfr!2sch"
+                width="600"
+                height="450"
+                style="border:0;"
+                 allowfullscreen=""
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+            </iframe>" 
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="infos-supp">
+      <div class="info-card">
+        <h4>Informations Complémentaires</h4>
+        <p>Réservations recommandées pour les groupes de 6 personnes et plus.<br>
+        Moyens de Paiement : Espèces, CB, Twint, sans contact.</p>
+        <p>Privatisation possible sur demande.<br>
+        Accessibilité aux personnes à mobilité réduite.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>🍺 Barcafe26</h3>
+        <p>L’endroit parfait pour savourer d’excellents cocktails dans une ambiance conviviale et moderne.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+        </ul>
+      </div>
+         <div class="footer-col">
+        <h4>Suivez-nous</h4>
+        <a href="https://www.instagram.com/cafebar.le26/" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p>Rue Baptiste-Savoye 62, 2610 Saint-Imier<br>
+        Tel: 032 285 14 14</p>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Cafebar26 - Emre Gürsültür | Mentions légales - Politique de confidentialité
+    </div>
+  </footer>
+  <script>
+  // Récupère le chemin courant de façon robuste (gère Live Server, file://, / et /index.html)
+  const currentPath = (() => {
+    try {
+      const p = new URL(window.location.href).pathname;
+      const last = p.split('/').filter(Boolean).pop();
+      return last || 'index.html';
+    } catch {
+      return 'index.html';
+    }
+  })();
+
+  // Marque le lien correspondant comme actif
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    // Normalise la cible (ne garde que le dernier segment)
+    const hrefLast = a.getAttribute('href').split('/').filter(Boolean).pop();
+    if (hrefLast === currentPath) {
+      a.classList.add('active');
+    }
+  });
+</script>
+
+
+</body>
+</html>
